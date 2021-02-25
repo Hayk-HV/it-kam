@@ -1,11 +1,6 @@
 .userPhoto {
-  height: 100px;
-  weight: 100px;
+     width: 100px;
+    height: 100px;
 }
 
-.show {
-}
 
-.hide {
-  display: none;
-}
