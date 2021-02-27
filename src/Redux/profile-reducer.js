@@ -66,8 +66,12 @@ export const getUserProfile = (userId) => async (dispatch) => {
 }
 
 export const getStatus = (userId) => async (dispatch) => {
-    let response = await profileAPI.getStatus(userId);
-    dispatch(setStatus(response.data));
+    try {
+        let response = await profileAPI.getStatus(userId);
+        dispatch(setStatus(response.data));
+    } catch {
+        //
+    }
 }
 
 export const updateStatus = (status) => async (dispatch) => {
